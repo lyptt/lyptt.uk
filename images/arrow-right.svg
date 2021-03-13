@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Path Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tablet-Light" transform="translate(-167.000000, -262.000000)" fill="black" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(48.000000, 256.000000)">
+                <path d="M122.44519,15.9973966 L130.00902,8.43590483 C130.568422,7.87623535 130.568422,6.97123791 130.00902,6.41752237 C129.449618,5.85785289 128.545053,5.86380682 127.985651,6.41752237 L119.416087,14.9852285 C118.874539,15.5270361 118.862636,16.39631 119.37443,16.9559795 L127.9797,25.5832249 C128.259401,25.8630596 128.628368,26 128.991384,26 C129.3544,26 129.723368,25.8630596 130.003069,25.5832249 C130.562471,25.0235554 130.562471,24.1185579 130.003069,23.5648424 L122.44519,15.9973966 Z" id="Path-Copy" transform="translate(124.714286, 16.000000) scale(-1, 1) translate(-124.714286, -16.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

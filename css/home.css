@@ -1,0 +1,77 @@
+article.home-page h2 {
+  margin-bottom: 36px;
+}
+
+article.home-page .end {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  text-align: right;
+}
+
+article.home-page .end:hover {
+  opacity: 1;
+}
+
+article.home-page .end p {
+  margin-bottom: 10px;
+  margin-top: 0;
+  line-height: 1;
+  min-height: 10px;
+}
+
+article.home-page .end p {
+  font-size: 0.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  margin: 0;
+  font-weight: normal;
+  color: var(--color-grey-1);
+}
+
+@media (prefers-color-scheme: dark) {
+  article.home-page .end p {
+    color: var(--color-white);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  article.home-page h2 {
+    width: 80%;
+    margin-right: 20%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  article.home-page h2 {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  article.home-page h2 {
+    margin-bottom: 70px;
+  }
+}
+
+article.home-page a {
+  display: block;
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1025px) {
+  article.home-page a {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  article.home-page a {
+    margin-bottom: 36px;
+  }
+}

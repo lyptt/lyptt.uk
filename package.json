@@ -1,0 +1,30 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "fs-extra": "^9.0.0",
+    "marked": "^1.0.0",
+    "prettier": "^2.0.5",
+    "rollup": "^2.7.6",
+    "servor": "^3.2.0",
+    "snowpack": "^1.7.1"
+  },
+  "scripts": {
+    "clean": "node scripts/clean.js",
+    "prepare-posts": "node scripts/prepare-posts.js",
+    "prebuild": "node scripts/prepare-posts.js && node scripts/generate-config.js",
+    "build": "yarn clean && snowpack --optimize --nomodule src/app.js && node scripts/package-application.js",
+    "build:dev": "yarn clean && yarn prebuild && snowpack",
+    "prestart": "yarn build",
+    "start": "servor --reload",
+    "style:fix": "prettier --write --plugin-search-dir=. ./**/*.html ./**/*.js"
+  },
+  "dependencies": {
+    "dayjs": "^1.8.26",
+    "history": "^4.10.1",
+    "preact": "^10.4.1",
+    "universal-router": "^9.0.1"
+  }
+}

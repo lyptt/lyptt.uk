@@ -1,0 +1,123 @@
+:root {
+  --color-primary-0: #1153bc;
+  --color-primary-1: #7689a9;
+  --color-primary-2: #4d658d;
+  --color-primary-3: #152d54;
+  --color-primary-4: #051938;
+
+  --color-secondary-0: #ffcd00;
+  --color-secondary-1: #ffeeaa;
+  --color-secondary-2: #d4bf6a;
+  --color-secondary-3: #806a15;
+  --color-secondary-4: #554400;
+
+  --color-tertiary-0: #ff6700;
+  --color-tertiary-1: #ffccaa;
+  --color-tertiary-2: #d4956a;
+  --color-tertiary-3: #804015;
+  --color-tertiary-4: #552200;
+
+  --color-grey-1: #111;
+  --color-grey-2: #222;
+  --color-grey-3: #333;
+  --color-grey-4: #444;
+  --color-grey-5: #555;
+  --color-grey-6: #666;
+  --color-grey-7: #777;
+  --color-grey-8: #888;
+  --color-grey-9: #999;
+
+  --color-white: #fff;
+  --color-white-2: #eee;
+  --color-white-3: #ddd;
+
+  --page-inset-small: 24px;
+  --page-inset-medium: 48px;
+  --page-inset-large: 72px;
+
+  --page-base-font-size-small: 16px;
+  --page-base-font-size-medium: 24px;
+  --page-base-font-size-large: 24px;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change
+ * https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  font-size: var(--page-base-font-size-small);
+  background: var(--color-white);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--color-grey-1);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: var(--page-base-font-size-medium);
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  body {
+    font-size: var(--page-base-font-size-large);
+  }
+}
+
+*:focus:not(:focus-visible),
+*::before:focus:not(:focus-visible),
+*::after:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939 */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
+.plain-list {
+  list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
+  padding-left: 0;
+}
+
+/* prettier-ignore */
+@media(prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

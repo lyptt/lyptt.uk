@@ -1,0 +1,26 @@
+article.blog-page h1 {
+  margin-bottom: 36px;
+}
+
+@media screen and (min-width: 1025px) {
+  article.blog-page h1 {
+    width: 80%;
+    margin-right: 20%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  article.blog-page h1 {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  article.blog-page h1 {
+    margin-bottom: 70px;
+  }
+}
+article.blog-page a {
+  display: block;
+  margin-bottom: 24px;
+}

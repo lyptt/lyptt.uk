@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Rhys Cox</title>
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/prism.css" async />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/blog.css" />
+    <link rel="stylesheet" href="/css/blog-post.css" />
+    <link rel="stylesheet" href="/css/heading.css" />
+    <link rel="stylesheet" href="/css/subheading.css" />
+    <link rel="stylesheet" href="/css/hyperlink.css" />
+
+    <link rel="modulepreload" href="/src/pages/home.js" as="script">
+    <link rel="modulepreload" href="/src/router.js" as="script">
+    <link rel="modulepreload" href="/src/history.js" as="script">
+    <link rel="modulepreload" href="/src/lib/prism.js" as="script">
+    <link rel="modulepreload" href="/web_modules/preact.js" as="script">
+  </head>
+
+  <body>
+    <main id="app"></main>
+    <script type="text/javascript">
+      window.Prism = window.Prism || {}
+      window.Prism.manual = true
+    </script>
+    <script type="module" src="/src/app.js"></script>
+    <script nomodule src="/web_modules/app.nomodule.js"></script>
+  </body>
+</html>

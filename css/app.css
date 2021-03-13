@@ -1,0 +1,53 @@
+main {
+  width: 100%;
+  min-height: 100%;
+}
+
+main article {
+  width: 100%;
+  min-height: 100%;
+  padding: var(--page-inset-small);
+  background-image: url('/images/boat-light.svg');
+  background-repeat: no-repeat;
+  background-size: 622px 308px;
+  background-position: right bottom;
+}
+
+@media (prefers-color-scheme: dark) {
+  main article {
+    background-image: url('/images/boat-dark.svg');
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main article {
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 1024px) and (prefers-color-scheme: dark) {
+  main article {
+    background-image: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  main article {
+    padding: var(--page-inset-medium);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  main article {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  main article {
+    padding: var(--page-inset-large);
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

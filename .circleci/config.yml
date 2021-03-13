@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12.6.0
+    working_directory: ~/repo
+    steps:
+      - run:
+          name: Install AWS CLI
+          command: "sudo apt-get update && sudo apt-get -y -qq install python-pip python-dev && sudo pip install awscli"
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: yarn
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: yarn build
+      - run:
+          name: Upload to S3
+          command: "aws s3 sync ~/repo/dist/ s3://lyptt.uk --region eu-central-1"
+      - run:
+          name: Invalidate CloudFront cache
+          command: 'aws cloudfront create-invalidation --distribution-id E2KYLDD89QLK6Z --paths "/*"'

@@ -1,0 +1,17 @@
+const fs = require('fs-extra')
+const path = require('path')
+
+const buildDir = path.resolve(path.join(__dirname, '..', 'dist'))
+const webmodulesDir = path.resolve(path.join(__dirname, '..', 'web_modules'))
+const cssDir = path.resolve(path.join(__dirname, '..', 'css'))
+const imagesDir = path.resolve(path.join(__dirname, '..', 'images'))
+const srcDir = path.resolve(path.join(__dirname, '..', 'src'))
+const indexFile = path.resolve(path.join(__dirname, '..', 'index.html'))
+
+fs.removeSync(buildDir)
+fs.mkdirSync(buildDir)
+fs.copySync(webmodulesDir, path.join(buildDir, 'web_modules'))
+fs.copySync(cssDir, path.join(buildDir, 'css'))
+fs.copySync(imagesDir, path.join(buildDir, 'images'))
+fs.copySync(srcDir, path.join(buildDir, 'src'))
+fs.copySync(indexFile, path.join(buildDir, 'index.html'))
